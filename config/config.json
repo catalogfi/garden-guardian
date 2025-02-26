@@ -1,0 +1,23 @@
+{
+    "token": "MTM*****************33g",
+    "bot_name": "Garden Guardian",
+    "timezone_offset": 5.5,
+    "guild_ids": "108*****************936",
+    "allowed_roles": [
+        "admin",
+        "dev"
+    ],
+    "allowed_user_ids": [
+        "989*****************114"
+    ],
+    "admins": [
+        "989*****************114"
+    ],
+    "devs": [
+        "134*****************853"
+    ],
+    "status": {
+        "type": "watching",
+        "message": "PRODUCTION Server"
+    }
+}
