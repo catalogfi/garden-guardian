@@ -1,0 +1,8 @@
+services:
+  garden-guardian:
+    container_name: garden-guardian
+    image: ghcr.io/catalogfi/garden-guardian:latest
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./config:/usr/src/app/config

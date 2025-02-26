@@ -84,13 +84,33 @@ cd garden-guardian
 
 4. Build and run the Docker container:
 ```bash
-docker build -t garden-guardian .
 docker run -d \
   --name garden-guardian \
+  --restart always \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -v $(pwd)/config:/usr/src/app/config \
-  garden-guardian
+  ghcr.io/catalogfi/garden-guardian:latest
+
 ```
+
+To deploy the `garden-guardian` container from GitHub Container Registry (GHCR), use the provided `docker-compose.yml` file.  
+
+#### **Steps to Run:**  
+1. Ensure Docker and Docker Compose are installed on your system.  
+2. Pull the latest image and start the container:  
+   ```sh
+   docker-compose up -d
+   ```
+3. The container will automatically restart if it stops, ensuring continuous operation.  
+
+#### **Volumes Used:**  
+- `/var/run/docker.sock:/var/run/docker.sock`: Allows the container to interact with the Docker daemon.  
+- `./config:/usr/src/app/config`: Mounts the local `config` directory for configuration files.  
+
+To stop the container, run:  
+```sh
+docker-compose down
+```  
 
 ### Bot Setup
 
